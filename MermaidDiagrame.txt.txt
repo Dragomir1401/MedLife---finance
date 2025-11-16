@@ -1,0 +1,116 @@
+flowchart TB
+    %% NIVEL 1
+    ROE["ROE 2024<br/>= Profit net / Capitaluri proprii totale<br/>= 16.752.427 / 504.644.731<br/>≈ 3,32%"]
+
+    %% NIVEL 2
+    ROA["ROA 2024<br/>= Profit net / Active totale<br/>= 16.752.427 / 3.016.313.845<br/>≈ 0,56%"]
+    MULT["Multiplicator CP 2024<br/>= Active totale / Capitaluri proprii<br/>= 3.016.313.845 / 504.644.731<br/>≈ 5,98"]
+
+    ROE --> ROA
+    ROE --> MULT
+
+    %% NIVEL 3
+    MARG["Rata profitului 2024<br/>= Profit net / Vânzări<br/>= 16.752.427 / 2.715.574.711<br/>≈ 0,62%"]
+    ROT["Rotația activelor 2024<br/>= Vânzări / Active totale<br/>= 2.715.574.711 / 3.016.313.845<br/>≈ 0,90"]
+
+    ROA --> MARG
+    ROA --> ROT
+
+    %% PROFIT + COSTURI (vertical)
+    subgraph PROFIT["Profit și costuri 2024"]
+        direction TB
+        PN["Profit net 2024<br/>= Vânzări − Costuri totale − Dobânzi − Impozit<br/>= 16.752.427 RON"]
+        V["Vânzări 2024<br/>= Venituri din contracte cu clienții<br/>= 2.715.574.711 RON"]
+        CT["Costuri totale 2024<br/>≈ 2.698.822.000 RON<br/>(Vânzări − Profit net + Dobânzi + Impozit)"]
+
+        COGS["Costul bunurilor vândute 2024<br/>= Consumabile + mărfuri<br/>= 499.578.757 + 226.208.593"]
+        OPEX["Cheltuieli operaționale 2024<br/>= terți + salarii + contribuții + alte cheltuieli"]
+        AM["Amortizare și depreciere 2024<br/>≈ 261.068.000 RON"]
+        INT["Dobânzi 2024<br/>= Costul finanțării<br/>= 102.630.990 RON"]
+        TAX["Impozit pe profit 2024<br/>= 22.316.703 RON"]
+
+        MARG --> PN
+        MARG --> V
+
+        PN --> CT
+        CT --> COGS --> OPEX --> AM --> INT --> TAX
+    end
+
+    %% ACTIVE (vertical)
+    subgraph ACTIVE["Active 2024"]
+        direction TB
+        AT["Active totale 2024<br/>= Active fixe + Active curente<br/>= 3.016.313.845 RON"]
+        AF["Active fixe 2024<br/>= 2.357.408.397 RON"]
+        AC["Active curente 2024<br/>= 658.905.448 RON"]
+
+        ST["Stocuri 2024<br/>= 148.798.218 RON"]
+        CR["Creanțe 2024<br/>= 324.106.860 RON"]
+        CA["Cash 2024<br/>= 112.808.224 RON"]
+        AO["Alte active curente + avansuri<br/>≈ 73.000.000 RON"]
+
+        ROT --> V
+        ROT --> AT
+        AT --> AF
+        AT --> AC
+        AC --> ST --> CR --> CA --> AO
+    end
+
+
+
+
+flowchart TB
+    %% NIVEL 1
+    ROE["ROE 2023<br/>= Profit net / Capitaluri proprii totale<br/>= -4.164.857 / 494.192.023<br/>≈ -0,84%"]
+
+    %% NIVEL 2
+    ROA["ROA 2023<br/>= Profit net / Active totale<br/>= -4.164.857 / 2.636.337.431<br/>≈ -0,16%"]
+    MULT["Multiplicator CP 2023<br/>= Active totale / Capitaluri proprii<br/>= 2.636.337.431 / 494.192.023<br/>≈ 5,33"]
+
+    ROE --> ROA
+    ROE --> MULT
+
+    %% NIVEL 3
+    MARG["Rata profitului 2023<br/>= Profit net / Vânzări<br/>= -4.164.857 / 2.210.435.349<br/>≈ -0,19%"]
+    ROT["Rotația activelor 2023<br/>= Vânzări / Active totale<br/>= 2.210.435.349 / 2.636.337.431<br/>≈ 0,84"]
+
+    ROA --> MARG
+    ROA --> ROT
+
+    %% PROFIT + COSTURI (vertical)
+    subgraph PROFIT["Profit și costuri 2023"]
+        direction TB
+        PN["Profit net 2023<br/>= Vânzări − Costuri totale − Dobânzi − Impozit<br/>= -4.164.857 RON"]
+        V["Vânzări 2023<br/>= Venituri din contracte cu clienții<br/>= 2.210.435.349 RON"]
+        CT["Costuri totale 2023<br/>≈ 2.214.600.000 RON<br/>(Vânzări − Profit net + Dobânzi + Impozit)"]
+
+        COGS["Costul bunurilor vândute 2023<br/>= Consumabile + mărfuri"]
+        OPEX["Cheltuieli operaționale 2023<br/>= terți + salarii + contribuții + alte cheltuieli"]
+        AM["Amortizare și depreciere 2023<br/>≈ 200.080.000 RON"]
+        INT["Dobânzi 2023<br/>= Costul finanțării<br/>= 82.170.695 RON"]
+        TAX["Impozit pe profit 2023<br/>= 8.464.341 RON"]
+
+        MARG --> PN
+        MARG --> V
+
+        PN --> CT
+        CT --> COGS --> OPEX --> AM --> INT --> TAX
+    end
+
+    %% ACTIVE (vertical)
+    subgraph ACTIVE["Active 2023"]
+        direction TB
+        AT["Active totale 2023<br/>= Active fixe + Active curente<br/>= 2.636.337.431 RON"]
+        AF["Active fixe 2023<br/>= 2.102.828.820 RON"]
+        AC["Active curente 2023<br/>= 533.508.611 RON"]
+
+        ST["Stocuri 2023<br/>= 109.657.497 RON"]
+        CR["Creanțe 2023<br/>= 261.664.410 RON"]
+        CA["Cash 2023<br/>= 100.271.093 RON"]
+        AO["Alte active curente + avansuri<br/>≈ 61.900.000 RON"]
+
+        ROT --> V
+        ROT --> AT
+        AT --> AF
+        AT --> AC
+        AC --> ST --> CR --> CA --> AO
+    end
